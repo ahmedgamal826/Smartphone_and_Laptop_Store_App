@@ -92,7 +92,7 @@ class _ProductGridState extends State<ProductGrid> {
                     storeModel.title,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,

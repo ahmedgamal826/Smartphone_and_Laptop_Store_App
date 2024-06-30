@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:phones_and_laptops_store_app/Screens/home_page.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -12,7 +11,7 @@ class SplashScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset('assets/logo.jpg'),
-          Row(
+          const Row(
             children: [
               SizedBox(
                 width: 10,
@@ -43,7 +42,7 @@ class SplashScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 100,
           ),
           ElevatedButton(
@@ -53,11 +52,11 @@ class SplashScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10))),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
+                    MaterialPageRoute(builder: (context) => const HomePage()));
               },
-              child: Padding(
-                padding: const EdgeInsets.only(
-                    left: 130, right: 130, top: 10, bottom: 10),
+              child: const Padding(
+                padding:
+                    EdgeInsets.only(left: 130, right: 130, top: 10, bottom: 10),
                 child: Text(
                   'Next',
                   style: TextStyle(fontSize: 30, color: Colors.white),

@@ -152,12 +152,16 @@ class _DetailedScreenState extends State<DetailedScreen> {
                           showAwesomeDialog(context);
                         });
                       },
-                      child: const Padding(
-                        padding: EdgeInsets.only(
-                            left: 100, right: 100, top: 10, bottom: 10),
-                        child: Text(
-                          'Add to cart',
-                          style: TextStyle(fontSize: 25, color: Colors.white),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          height: 50,
+                          child: const Text(
+                            textAlign: TextAlign.center,
+                            'Add to cart',
+                            style: TextStyle(fontSize: 25, color: Colors.white),
+                          ),
                         ),
                       )),
                 ],

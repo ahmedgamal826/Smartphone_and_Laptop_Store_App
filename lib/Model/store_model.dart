@@ -4,7 +4,7 @@ class StoreModel {
   late String description;
   late String category;
   late String thumbnail;
-  late int price;
+  late double price;
   late String brand;
   late List<String> images; // New field for image URLs
 
@@ -24,7 +24,9 @@ class StoreModel {
     description = json['description'];
     category = json['category'];
     thumbnail = json['thumbnail'];
-    price = json['price'];
+    price = json['price'] is int
+        ? (json['price'] as int).toDouble()
+        : json['price'] as double;
     images = List<String>.from(json['images'] ?? []); // Ensure null-safety
     brand = json['brand'];
   }
